@@ -8,7 +8,7 @@
 
 import UIKit
 
-class gitHubAuthController: UIViewController {
+class GitHubAuthController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

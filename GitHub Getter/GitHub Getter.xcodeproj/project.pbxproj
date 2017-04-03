@@ -12,8 +12,9 @@
 		62E9D3151E92B0B2007403A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E9D3141E92B0B2007403A0 /* Assets.xcassets */; };
 		62E9D3181E92B0B2007403A0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E9D3161E92B0B2007403A0 /* LaunchScreen.storyboard */; };
 		62E9D3201E92C916007403A0 /* GitHub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D31F1E92C916007403A0 /* GitHub.swift */; };
-		62E9D3251E92CE55007403A0 /* gitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D3241E92CE55007403A0 /* gitHubAuthController.swift */; };
+		62E9D3251E92CE55007403A0 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */; };
 		62E9D32A1E92DA01007403A0 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D3291E92DA01007403A0 /* Credentials.swift */; };
+		62E9D32C1E92EC1E007403A0 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D32B1E92EC1E007403A0 /* FoundationExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +25,9 @@
 		62E9D3171E92B0B2007403A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62E9D3191E92B0B2007403A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62E9D31F1E92C916007403A0 /* GitHub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHub.swift; sourceTree = "<group>"; };
-		62E9D3241E92CE55007403A0 /* gitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gitHubAuthController.swift; sourceTree = "<group>"; };
+		62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		62E9D3291E92DA01007403A0 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		62E9D32B1E92EC1E007403A0 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				62E9D30D1E92B0B2007403A0 /* AppDelegate.swift */,
-				62E9D3241E92CE55007403A0 /* gitHubAuthController.swift */,
+				62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -97,6 +99,7 @@
 		62E9D3281E92D77A007403A0 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				62E9D32B1E92EC1E007403A0 /* FoundationExtensions.swift */,
 				62E9D3191E92B0B2007403A0 /* Info.plist */,
 			);
 			name = Supporting;
@@ -176,7 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62E9D3201E92C916007403A0 /* GitHub.swift in Sources */,
-				62E9D3251E92CE55007403A0 /* gitHubAuthController.swift in Sources */,
+				62E9D32C1E92EC1E007403A0 /* FoundationExtensions.swift in Sources */,
+				62E9D3251E92CE55007403A0 /* GitHubAuthController.swift in Sources */,
 				62E9D32A1E92DA01007403A0 /* Credentials.swift in Sources */,
 				62E9D30E1E92B0B2007403A0 /* AppDelegate.swift in Sources */,
 			);
