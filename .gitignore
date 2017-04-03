@@ -161,3 +161,6 @@ playground.xcworkspace
 /*.gcno
 
 # End of https://www.gitignore.io/api/swift,xcode,macos,objective-c
+
+## Authentication tokens
+Credentials.swift
