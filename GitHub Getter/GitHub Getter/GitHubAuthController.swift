@@ -30,8 +30,14 @@ class GitHubAuthController: UIViewController {
     }
    
     @IBAction func loginButtonPressed(_ sender: Any) {
-        let parameters = ["scope": "email,user"]
-        GitHub.shared.oAuthRequestWith(parameters: parameters)
+        if GitHub.shared.token == "" {
+            let parameters = ["scope": "email,user"]
+            GitHub.shared.oAuthRequestWith(parameters: parameters)
+        } else {
+            loginButton.isEnabled = false
+            loginButton.backgroundColor = UIColor.darkGray
+            loginButton.setTitle("Logged in", for: .disabled)
+        }
     }
     
 }
