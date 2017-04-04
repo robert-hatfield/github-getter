@@ -21,47 +21,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-aD-623">
-                                <rect key="frame" x="16" y="572" width="343" height="75"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hag-Hc-kz0">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="zqP-gQ-5MG"/>
+                                    <constraint firstAttribute="height" constant="200" id="8Qh-O3-fHw"/>
+                                    <constraint firstAttribute="width" constant="200" id="Cds-j3-v1P"/>
                                 </constraints>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled" title="Logged in"/>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DB-Rh-wCs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy8-AR-kGu">
-                                <rect key="frame" x="16" y="308" width="343" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRe-7n-qDA">
+                                <rect key="frame" x="-4" y="441" width="383" height="226"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-aD-623">
+                                        <rect key="frame" x="20" y="76" width="343" height="75"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="zqP-gQ-5MG"/>
+                                        </constraints>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled" title="Logged in"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DB-Rh-wCs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GHH-mb-D6H"/>
+                                    <constraint firstItem="wk6-aD-623" firstAttribute="centerY" secondItem="mRe-7n-qDA" secondAttribute="centerY" id="G7c-Eg-H49"/>
+                                    <constraint firstItem="wk6-aD-623" firstAttribute="leading" secondItem="mRe-7n-qDA" secondAttribute="leading" constant="20" id="VVZ-ge-eod"/>
+                                    <constraint firstAttribute="trailing" secondItem="wk6-aD-623" secondAttribute="trailing" constant="20" id="zux-Fw-6Tb"/>
                                 </constraints>
-                                <state key="normal" title="PRINT TOKEN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGK-JR-JB9"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wk6-aD-623" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="GB6-TW-J6d"/>
-                            <constraint firstItem="qy8-AR-kGu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sa7-hh-RYL"/>
-                            <constraint firstAttribute="trailing" secondItem="wk6-aD-623" secondAttribute="trailing" constant="16" id="V2J-Zw-RKb"/>
-                            <constraint firstItem="qy8-AR-kGu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="dAQ-yo-FKg"/>
-                            <constraint firstAttribute="trailing" secondItem="qy8-AR-kGu" secondAttribute="trailing" constant="16" id="xGQ-Rj-PPH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wk6-aD-623" secondAttribute="bottom" constant="20" id="yQi-gE-DZ1"/>
+                            <constraint firstItem="mRe-7n-qDA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="8" id="MXR-72-BXb"/>
+                            <constraint firstItem="hag-Hc-kz0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZDv-t9-Tol"/>
+                            <constraint firstItem="mRe-7n-qDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hKG-0O-gA6"/>
+                            <constraint firstItem="hag-Hc-kz0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nxG-66-mVa"/>
+                            <constraint firstItem="mRe-7n-qDA" firstAttribute="top" secondItem="hag-Hc-kz0" secondAttribute="bottom" constant="8" id="vXL-Jj-4JA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mRe-7n-qDA" secondAttribute="bottom" id="xr1-br-3vJ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="wk6-aD-623" id="0Ur-lC-J3P"/>
-                        <outlet property="printTokenButton" destination="qy8-AR-kGu" id="HDI-H4-TH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -87,4 +91,7 @@
             <point key="canvasLocation" x="-708" y="123"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="github_logo" width="1000" height="750"/>
+    </resources>
 </document>

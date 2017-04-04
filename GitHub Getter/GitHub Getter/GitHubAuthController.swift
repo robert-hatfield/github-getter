@@ -11,7 +11,6 @@ import UIKit
 class GitHubAuthController: UIViewController {
     
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var printTokenButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +21,6 @@ class GitHubAuthController: UIViewController {
             print("Token loaded from defaults: \(GitHub.shared.token)")
         } else { print("No token in defaults.") }
         // Do any additional setup after loading the view.
-    }
-
-    @IBAction func printTokenPressed(_ sender: Any) {
-        if GitHub.shared.token == "" { print("I don't have a token.") } else {
-            print("Current token is: \(GitHub.shared.token)") }
     }
    
     @IBAction func loginButtonPressed(_ sender: Any) {
