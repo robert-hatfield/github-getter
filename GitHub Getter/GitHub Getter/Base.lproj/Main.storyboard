@@ -30,6 +30,7 @@
                                 <state key="normal" title="LOGIN">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <state key="disabled" title="Logged in"/>
                                 <connections>
                                     <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DB-Rh-wCs"/>
                                 </connections>
@@ -58,6 +59,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wk6-aD-623" secondAttribute="bottom" constant="20" id="yQi-gE-DZ1"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="wk6-aD-623" id="0Ur-lC-J3P"/>
+                        <outlet property="printTokenButton" destination="qy8-AR-kGu" id="HDI-H4-TH6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

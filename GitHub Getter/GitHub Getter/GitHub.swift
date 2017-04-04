@@ -9,7 +9,7 @@
 import UIKit
 
 let kOAuthBaseURLString = "https://github.com/login/oauth/"
-let defaults = UserDefaults.standard
+
 
 typealias GitHubOAuthCompletion = (Bool)->()
 
@@ -25,6 +25,10 @@ enum SaveOptions {
 class GitHub {
     
     static let shared = GitHub()
+    private init () {}
+    
+    var token = ""
+    let defaults = UserDefaults.standard
     
     func oAuthRequestWith(parameters: [String : String]) {
         var parametersString = ""
@@ -76,7 +80,8 @@ class GitHub {
                             complete(success: false); return
                         }
                         print("Token: \(token)")
-                        if !defaults.save(accessToken: token) {
+                        self.token = token
+                        if !GitHub.shared.defaults.save(accessToken: token) {
                             print("Unable to save token to UserDefaults")
                             complete(success: false)
                         }
