@@ -52,7 +52,7 @@ class GitHub {
         }
         
         if let requestURL = URL(string: "\(kOAuthBaseURLString)authorize?client_id=\(Credentials.kGitHubClientId)\(parametersString)") {
-            print(requestURL.absoluteString)
+            print("OAuth request sent: \(requestURL.absoluteString)")
             UIApplication.shared.open(requestURL)
         }
     }
@@ -93,7 +93,7 @@ class GitHub {
                             print("Unable to parse token from data")
                             complete(success: false); return
                         }
-                        print("Token: \(token)")
+                        print("Token received: \(token)")
                         self.token = token
                         if !GitHub.shared.defaults.save(accessToken: token) {
                             print("Unable to save token to UserDefaults")
