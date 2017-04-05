@@ -8,20 +8,23 @@
 
 import UIKit
 
-class RepoViewController: UIViewController, UISearchBarDelegate {
+class RepoViewController: UIViewController {
+    
+    @IBOutlet weak var repoTableView: UITableView!
+    
+    @IBOutlet weak var repositoryCell: RepositoryCell!
+
     var repositories = [Repository]() {
         didSet {
-            print(repositories.first?.name)
-            print(repositories.first?.description)
-            print(repositories.first?.language)
-//            self.tableView.reloadData()
+            self.repoTableView.reloadData()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.repoTableView.dataSource = self
+        self.repoTableView.delegate = self
         update()
     }
 
@@ -30,6 +33,23 @@ class RepoViewController: UIViewController, UISearchBarDelegate {
             // update tableView with repositories
             self.repositories = repositories ?? []
         }
+    }
+    
+}
+
+//MARK: UITableView extension
+extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return repositories.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier, for: indexPath) as! RepositoryCell
+        
+        let repo = self.repositories[indexPath.row]
+        cell.repo = repo
+        return cell
     }
     
 }
