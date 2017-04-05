@@ -35,10 +35,7 @@ class GitHub {
         self.components = URLComponents()
         self.components.scheme = "https"
         self.components.host = "api.github.com"
-        if let token = UserDefaults.standard.getAccessToken() {
-            let queryItem = URLQueryItem(name: "access_token", value: token)
-            self.components.queryItems = [queryItem]
-        }
+
     }
     
     var token = ""
@@ -111,6 +108,11 @@ class GitHub {
     }
     
     func getRepos(completion: @escaping FetchReposCompletion) {
+        
+        if let token = UserDefaults.standard.getAccessToken() {
+            let queryItem = URLQueryItem(name: "access_token", value: token)
+            self.components.queryItems = [queryItem]
+        }
 
         func returnToMain(results: [Repository]?) {
             OperationQueue.main.addOperation {
