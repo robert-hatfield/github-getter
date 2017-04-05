@@ -84,9 +84,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-wh-xz7">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PrZ-NC-obv">
+                                <rect key="frame" x="0.0" y="311" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-wh-xz7">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryCell" id="JA0-Ni-6H9" customClass="RepositoryCell" customModule="GitHub_Getter" customModuleProvider="target">
@@ -113,6 +116,15 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cvc-wh-xz7" firstAttribute="width" secondItem="eW9-b3-2p1" secondAttribute="width" id="5pC-LG-Ebq"/>
+                            <constraint firstItem="cvc-wh-xz7" firstAttribute="centerX" secondItem="eW9-b3-2p1" secondAttribute="centerX" id="KGb-by-PPd"/>
+                            <constraint firstItem="PrZ-NC-obv" firstAttribute="centerX" secondItem="eW9-b3-2p1" secondAttribute="centerX" id="WPd-2n-EJp"/>
+                            <constraint firstItem="PrZ-NC-obv" firstAttribute="top" secondItem="Q2m-iK-vB0" secondAttribute="bottom" constant="291" id="jhJ-9H-YFm"/>
+                            <constraint firstItem="cvc-wh-xz7" firstAttribute="top" secondItem="PrZ-NC-obv" secondAttribute="bottom" constant="-335" id="lvN-3G-IUS"/>
+                            <constraint firstItem="PrZ-NC-obv" firstAttribute="width" secondItem="eW9-b3-2p1" secondAttribute="width" id="tUD-I3-ROx"/>
+                            <constraint firstItem="LMu-aI-pYY" firstAttribute="top" secondItem="cvc-wh-xz7" secondAttribute="bottom" id="y8G-G1-yar"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="repoTableView" destination="cvc-wh-xz7" id="dN0-aI-tcs"/>

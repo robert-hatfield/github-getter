@@ -13,12 +13,19 @@ class RepoViewController: UIViewController {
     @IBOutlet weak var repoTableView: UITableView!
     
     @IBOutlet weak var repositoryCell: RepositoryCell!
-
-    var repositories = [Repository]() {
+    
+    var filteredRepositories = [Repository]() {
         didSet {
             self.repoTableView.reloadData()
         }
     }
+    
+    var allRepositories = [Repository]() {
+        didSet {
+            self.filteredRepositories = allRepositories
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +38,16 @@ class RepoViewController: UIViewController {
     func update() {
         GitHub.shared.getRepos { (repositories) in
             // update tableView with repositories
-            self.repositories = repositories ?? []
+            self.allRepositories = repositories ?? []
         }
+    }
+    
+    func filterRepos() {
+        self.filteredRepositories = allRepositories.filter { repo in
+            return repo.name.lowercased().contains("cookie".lowercased())
+        }
+        print(filteredRepositories)
+        self.repoTableView.reloadData()
     }
     
 }
@@ -41,13 +56,13 @@ class RepoViewController: UIViewController {
 extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return repositories.count
+        return filteredRepositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier, for: indexPath) as! RepositoryCell
         
-        let repo = self.repositories[indexPath.row]
+        let repo = self.filteredRepositories[indexPath.row]
         cell.repo = repo
         return cell
     }
