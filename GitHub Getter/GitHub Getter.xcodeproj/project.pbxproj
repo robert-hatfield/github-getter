@@ -90,6 +90,7 @@
 			children = (
 				62E9D30D1E92B0B2007403A0 /* AppDelegate.swift */,
 				62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */,
+				62EDBA851E940C0000CAF1F6 /* RepoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -98,7 +99,6 @@
 			isa = PBXGroup;
 			children = (
 				62E9D3111E92B0B2007403A0 /* Main.storyboard */,
-				62EDBA851E940C0000CAF1F6 /* RepoViewController.swift */,
 				62E9D3161E92B0B2007403A0 /* LaunchScreen.storyboard */,
 			);
 			name = Views;

@@ -9,7 +9,15 @@
 import UIKit
 
 class RepoViewController: UIViewController, UISearchBarDelegate {
-
+    var repositories = [Repository]() {
+        didSet {
+            print(repositories.first?.name)
+            print(repositories.first?.description)
+            print(repositories.first?.language)
+//            self.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,9 +26,9 @@ class RepoViewController: UIViewController, UISearchBarDelegate {
     }
 
     func update() {
-        print("update repo controller here")
         GitHub.shared.getRepos { (repositories) in
             // update tableView with repositories
+            self.repositories = repositories ?? []
         }
     }
     
