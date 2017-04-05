@@ -9,7 +9,19 @@
 import UIKit
 
 class RepositoryCell: UITableViewCell {
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var languageLabel: UILabel!
 
+    var repo : Repository! {
+        didSet {
+            self.nameLabel.text = repo.name
+            self.descriptionLabel.text = repo.description ?? "No description provided"
+            self.languageLabel.text = repo.language ?? "No primary language"
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

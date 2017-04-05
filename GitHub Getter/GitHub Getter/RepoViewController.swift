@@ -12,8 +12,6 @@ class RepoViewController: UIViewController {
     
     @IBOutlet weak var repoTableView: UITableView!
     
-    @IBOutlet weak var repositoryCell: RepositoryCell!
-    
     var filteredRepositories = [Repository]() {
         didSet {
             self.repoTableView.reloadData()
@@ -31,6 +29,12 @@ class RepoViewController: UIViewController {
 
         self.repoTableView.dataSource = self
         self.repoTableView.delegate = self
+        
+        let repoNib = UINib(nibName: "RepositoryCell", bundle: nil)
+        self.repoTableView.register(repoNib, forCellReuseIdentifier: RepositoryCell.identifier)
+        self.repoTableView.estimatedRowHeight = 70
+        self.repoTableView.rowHeight = UITableViewAutomaticDimension
+        
         update()
     }
 
@@ -69,8 +73,7 @@ extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier, for: indexPath) as! RepositoryCell
         
-        let repo = self.filteredRepositories[indexPath.row]
-        cell.repo = repo
+        cell.repo = self.filteredRepositories[indexPath.row]
         return cell
     }
     
