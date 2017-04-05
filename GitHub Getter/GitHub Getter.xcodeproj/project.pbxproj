@@ -15,6 +15,10 @@
 		62E9D3251E92CE55007403A0 /* GitHubAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */; };
 		62E9D32A1E92DA01007403A0 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D3291E92DA01007403A0 /* Credentials.swift */; };
 		62E9D32C1E92EC1E007403A0 /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D32B1E92EC1E007403A0 /* FoundationExtensions.swift */; };
+		62EDBA861E940C0000CAF1F6 /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EDBA851E940C0000CAF1F6 /* RepoViewController.swift */; };
+		62EDBA881E940D5100CAF1F6 /* UIExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EDBA871E940D5100CAF1F6 /* UIExtensions.swift */; };
+		62EDBA8A1E94194E00CAF1F6 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EDBA891E94194E00CAF1F6 /* Repository.swift */; };
+		62EDBA8C1E94747C00CAF1F6 /* RepositoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EDBA8B1E94747B00CAF1F6 /* RepositoryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitHubAuthController.swift; sourceTree = "<group>"; };
 		62E9D3291E92DA01007403A0 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		62E9D32B1E92EC1E007403A0 /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		62EDBA851E940C0000CAF1F6 /* RepoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoViewController.swift; sourceTree = "<group>"; };
+		62EDBA871E940D5100CAF1F6 /* UIExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIExtensions.swift; sourceTree = "<group>"; };
+		62EDBA891E94194E00CAF1F6 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		62EDBA8B1E94747B00CAF1F6 /* RepositoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +80,7 @@
 		62E9D3211E92C94B007403A0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				62EDBA891E94194E00CAF1F6 /* Repository.swift */,
 				62E9D31F1E92C916007403A0 /* GitHub.swift */,
 				62E9D3291E92DA01007403A0 /* Credentials.swift */,
 			);
@@ -83,6 +92,7 @@
 			children = (
 				62E9D30D1E92B0B2007403A0 /* AppDelegate.swift */,
 				62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */,
+				62EDBA851E940C0000CAF1F6 /* RepoViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -90,6 +100,7 @@
 		62E9D3271E92D74E007403A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				62EDBA8B1E94747B00CAF1F6 /* RepositoryCell.swift */,
 				62E9D3111E92B0B2007403A0 /* Main.storyboard */,
 				62E9D3161E92B0B2007403A0 /* LaunchScreen.storyboard */,
 			);
@@ -99,6 +110,7 @@
 		62E9D3281E92D77A007403A0 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				62EDBA871E940D5100CAF1F6 /* UIExtensions.swift */,
 				62E9D32B1E92EC1E007403A0 /* FoundationExtensions.swift */,
 				62E9D3191E92B0B2007403A0 /* Info.plist */,
 			);
@@ -178,8 +190,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62EDBA8C1E94747C00CAF1F6 /* RepositoryCell.swift in Sources */,
 				62E9D3201E92C916007403A0 /* GitHub.swift in Sources */,
+				62EDBA881E940D5100CAF1F6 /* UIExtensions.swift in Sources */,
 				62E9D32C1E92EC1E007403A0 /* FoundationExtensions.swift in Sources */,
+				62EDBA8A1E94194E00CAF1F6 /* Repository.swift in Sources */,
+				62EDBA861E940C0000CAF1F6 /* RepoViewController.swift in Sources */,
 				62E9D3251E92CE55007403A0 /* GitHubAuthController.swift in Sources */,
 				62E9D32A1E92DA01007403A0 /* Credentials.swift in Sources */,
 				62E9D30E1E92B0B2007403A0 /* AppDelegate.swift in Sources */,
@@ -346,6 +362,7 @@
 				62E9D31E1E92B0B2007403A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

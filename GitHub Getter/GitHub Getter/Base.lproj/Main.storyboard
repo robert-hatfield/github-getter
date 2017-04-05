@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="uXe-6e-e9d">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <!--Git Hub Auth Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GitHubAuthController" customModule="GitHub_Getter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GitHubAuthController" id="BYZ-38-t0r" customClass="GitHubAuthController" customModule="GitHub_Getter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -21,52 +21,121 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-aD-623">
-                                <rect key="frame" x="16" y="572" width="343" height="75"/>
-                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hag-Hc-kz0">
+                                <rect key="frame" x="87" y="233" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="zqP-gQ-5MG"/>
+                                    <constraint firstAttribute="height" constant="200" id="8Qh-O3-fHw"/>
+                                    <constraint firstAttribute="width" constant="200" id="Cds-j3-v1P"/>
                                 </constraints>
-                                <state key="normal" title="LOGIN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <state key="disabled" title="Logged in"/>
-                                <connections>
-                                    <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DB-Rh-wCs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qy8-AR-kGu">
-                                <rect key="frame" x="16" y="308" width="343" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRe-7n-qDA">
+                                <rect key="frame" x="-4" y="441" width="383" height="226"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wk6-aD-623">
+                                        <rect key="frame" x="20" y="76" width="343" height="75"/>
+                                        <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="zqP-gQ-5MG"/>
+                                        </constraints>
+                                        <state key="normal" title="LOGIN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <state key="disabled" title="Logged in"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9DB-Rh-wCs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="GHH-mb-D6H"/>
+                                    <constraint firstItem="wk6-aD-623" firstAttribute="centerY" secondItem="mRe-7n-qDA" secondAttribute="centerY" id="G7c-Eg-H49"/>
+                                    <constraint firstItem="wk6-aD-623" firstAttribute="leading" secondItem="mRe-7n-qDA" secondAttribute="leading" constant="20" id="VVZ-ge-eod"/>
+                                    <constraint firstAttribute="trailing" secondItem="wk6-aD-623" secondAttribute="trailing" constant="20" id="zux-Fw-6Tb"/>
                                 </constraints>
-                                <state key="normal" title="PRINT TOKEN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="printTokenPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FGK-JR-JB9"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wk6-aD-623" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="GB6-TW-J6d"/>
-                            <constraint firstItem="qy8-AR-kGu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Sa7-hh-RYL"/>
-                            <constraint firstAttribute="trailing" secondItem="wk6-aD-623" secondAttribute="trailing" constant="16" id="V2J-Zw-RKb"/>
-                            <constraint firstItem="qy8-AR-kGu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="dAQ-yo-FKg"/>
-                            <constraint firstAttribute="trailing" secondItem="qy8-AR-kGu" secondAttribute="trailing" constant="16" id="xGQ-Rj-PPH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wk6-aD-623" secondAttribute="bottom" constant="20" id="yQi-gE-DZ1"/>
+                            <constraint firstItem="mRe-7n-qDA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="8" id="MXR-72-BXb"/>
+                            <constraint firstItem="hag-Hc-kz0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZDv-t9-Tol"/>
+                            <constraint firstItem="mRe-7n-qDA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hKG-0O-gA6"/>
+                            <constraint firstItem="hag-Hc-kz0" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="nxG-66-mVa"/>
+                            <constraint firstItem="mRe-7n-qDA" firstAttribute="top" secondItem="hag-Hc-kz0" secondAttribute="bottom" constant="8" id="vXL-Jj-4JA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mRe-7n-qDA" secondAttribute="bottom" id="xr1-br-3vJ"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="wk6-aD-623" id="0Ur-lC-J3P"/>
-                        <outlet property="printTokenButton" destination="qy8-AR-kGu" id="HDI-H4-TH6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
         </scene>
+        <!--Repo View Controller-->
+        <scene sceneID="zYB-rx-vPA">
+            <objects>
+                <viewController id="uXe-6e-e9d" customClass="RepoViewController" customModule="GitHub_Getter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q2m-iK-vB0"/>
+                        <viewControllerLayoutGuide type="bottom" id="LMu-aI-pYY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eW9-b3-2p1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PrZ-NC-obv">
+                                <rect key="frame" x="0.0" y="311" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-wh-xz7">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RepositoryCell" id="JA0-Ni-6H9" customClass="RepositoryCell" customModule="GitHub_Getter" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JA0-Ni-6H9" id="jKB-Wo-bPH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repository Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mkn-c2-bN1">
+                                                    <rect key="frame" x="8" y="8" width="359" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Mkn-c2-bN1" id="gbM-5S-WSE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cvc-wh-xz7" firstAttribute="width" secondItem="eW9-b3-2p1" secondAttribute="width" id="5pC-LG-Ebq"/>
+                            <constraint firstItem="cvc-wh-xz7" firstAttribute="centerX" secondItem="eW9-b3-2p1" secondAttribute="centerX" id="KGb-by-PPd"/>
+                            <constraint firstItem="PrZ-NC-obv" firstAttribute="centerX" secondItem="eW9-b3-2p1" secondAttribute="centerX" id="WPd-2n-EJp"/>
+                            <constraint firstItem="PrZ-NC-obv" firstAttribute="top" secondItem="Q2m-iK-vB0" secondAttribute="bottom" constant="291" id="jhJ-9H-YFm"/>
+                            <constraint firstItem="cvc-wh-xz7" firstAttribute="top" secondItem="PrZ-NC-obv" secondAttribute="bottom" constant="-335" id="lvN-3G-IUS"/>
+                            <constraint firstItem="PrZ-NC-obv" firstAttribute="width" secondItem="eW9-b3-2p1" secondAttribute="width" id="tUD-I3-ROx"/>
+                            <constraint firstItem="LMu-aI-pYY" firstAttribute="top" secondItem="cvc-wh-xz7" secondAttribute="bottom" id="y8G-G1-yar"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="repoTableView" destination="cvc-wh-xz7" id="dN0-aI-tcs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzH-OK-zru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-708" y="122.78860569715144"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="github_logo" width="1000" height="750"/>
+    </resources>
 </document>
