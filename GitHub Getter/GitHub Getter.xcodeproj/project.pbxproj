@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6205895E1E956E7800961590 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205895D1E956E7700961590 /* RepoDetailViewController.swift */; };
+		620589601E95706100961590 /* CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6205895F1E95706000961590 /* CustomTransition.swift */; };
 		62E9D30E1E92B0B2007403A0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E9D30D1E92B0B2007403A0 /* AppDelegate.swift */; };
 		62E9D3131E92B0B2007403A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62E9D3111E92B0B2007403A0 /* Main.storyboard */; };
 		62E9D3151E92B0B2007403A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62E9D3141E92B0B2007403A0 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6205895D1E956E7700961590 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
+		6205895F1E95706000961590 /* CustomTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransition.swift; sourceTree = "<group>"; };
 		62E9D30A1E92B0B2007403A0 /* GitHub Getter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GitHub Getter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E9D30D1E92B0B2007403A0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62E9D3121E92B0B2007403A0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,9 +94,11 @@
 		62E9D3261E92CE5D007403A0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6205895D1E956E7700961590 /* RepoDetailViewController.swift */,
 				62E9D30D1E92B0B2007403A0 /* AppDelegate.swift */,
 				62E9D3241E92CE55007403A0 /* GitHubAuthController.swift */,
 				62EDBA851E940C0000CAF1F6 /* RepoViewController.swift */,
+				6205895F1E95706000961590 /* CustomTransition.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,11 +198,13 @@
 			files = (
 				62EDBA8C1E94747C00CAF1F6 /* RepositoryCell.swift in Sources */,
 				62E9D3201E92C916007403A0 /* GitHub.swift in Sources */,
+				620589601E95706100961590 /* CustomTransition.swift in Sources */,
 				62EDBA881E940D5100CAF1F6 /* UIExtensions.swift in Sources */,
 				62E9D32C1E92EC1E007403A0 /* FoundationExtensions.swift in Sources */,
 				62EDBA8A1E94194E00CAF1F6 /* Repository.swift in Sources */,
 				62EDBA861E940C0000CAF1F6 /* RepoViewController.swift in Sources */,
 				62E9D3251E92CE55007403A0 /* GitHubAuthController.swift in Sources */,
+				6205895E1E956E7800961590 /* RepoDetailViewController.swift in Sources */,
 				62E9D32A1E92DA01007403A0 /* Credentials.swift in Sources */,
 				62E9D30E1E92B0B2007403A0 /* AppDelegate.swift in Sources */,
 			);

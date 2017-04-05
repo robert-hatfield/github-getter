@@ -70,7 +70,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+            <point key="canvasLocation" x="-708" y="-551"/>
+        </scene>
+        <!--Repo Detail View Controller-->
+        <scene sceneID="zH5-47-5JL">
+            <objects>
+                <viewController id="uYH-oM-CeE" customClass="RepoDetailViewController" customModule="GitHub_Getter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="991-Lv-zgQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="u73-ao-Ar1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vR8-Dd-oEI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKZ-Z9-iMg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="123"/>
         </scene>
         <!--Repo View Controller-->
         <scene sceneID="zYB-rx-vPA">
@@ -128,6 +146,7 @@
                     </view>
                     <connections>
                         <outlet property="repoTableView" destination="cvc-wh-xz7" id="dN0-aI-tcs"/>
+                        <segue destination="uYH-oM-CeE" kind="presentation" identifier="RepoDetailViewController" id="6qH-dK-7Qc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AzH-OK-zru" userLabel="First Responder" sceneMemberID="firstResponder"/>

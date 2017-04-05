@@ -42,6 +42,14 @@ class RepoViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if segue.identifier == RepoDetailViewController.identifier {
+            segue.destination.transitioningDelegate = self
+        }
+    }
+    
     func filterRepos() {
         self.filteredRepositories = allRepositories.filter { repo in
             return repo.name.lowercased().contains("cookie".lowercased())
@@ -52,7 +60,7 @@ class RepoViewController: UIViewController {
     
 }
 
-//MARK: UITableView extension
+//MARK: UITableView extensions
 extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,4 +75,16 @@ extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
+    }
+}
+
+//MARK: Controller transitioning delegate extension
+extension RepoViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        
+        return CustomTransition(duration: 1.0)
+        
+    }
 }
