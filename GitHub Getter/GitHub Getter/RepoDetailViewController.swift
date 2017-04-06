@@ -22,8 +22,6 @@ class RepoDetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Repo: \(repo.name)")
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
