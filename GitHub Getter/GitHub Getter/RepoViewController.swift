@@ -49,7 +49,17 @@ class RepoViewController: UIViewController {
         super.prepare(for: segue, sender: sender)
         
         if segue.identifier == RepoDetailViewController.identifier {
+            guard let selectedIndex = self.repoTableView.indexPathForSelectedRow?.row else {
+                return
+            }
+            let selectedRepo = self.filteredRepositories[selectedIndex]
+            
             segue.destination.transitioningDelegate = self
+            guard let destinationViewController = segue.destination as? RepoDetailViewController else {
+                return
+            }
+            destinationViewController.repo = selectedRepo
+            
         }
     }
     

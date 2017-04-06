@@ -9,9 +9,12 @@
 import UIKit
 
 class RepoDetailViewController: UIViewController {
+    
+    var repo : Repository!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("Repo: \(repo.name)")
 
     }
     
