@@ -16,6 +16,7 @@ class Repository {
     let stars: Int
     let isFork: Bool
     let createdAt: Date
+    let repoUrlString: String
 //    let languagesUrl: URL?
     
     init?(json: [String: Any]) {
@@ -33,7 +34,7 @@ class Repository {
         self.language = json["language"] as? String ?? nil
         self.stars = json["stargazers_count"] as? Int ?? 0
         self.isFork = json["fork"] as? Bool ?? false
-        
+        self.repoUrlString = json["html_url"] as? String ?? "https://www.github.com"
 
         
     }

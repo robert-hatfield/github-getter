@@ -129,13 +129,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-ug-XCs">
+                                <rect key="frame" x="133.5" y="318" width="107" height="30"/>
+                                <state key="normal" title="View on GitHub"/>
+                                <connections>
+                                    <action selector="viewOnGitHub:" destination="uYH-oM-CeE" eventType="touchUpInside" id="jO1-RU-cwH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="zLn-49-7iJ" secondAttribute="leading" id="1no-l1-oo4"/>
+                            <constraint firstItem="qC4-ug-XCs" firstAttribute="centerY" secondItem="vR8-Dd-oEI" secondAttribute="centerY" id="8oy-t7-6yR"/>
                             <constraint firstItem="hJL-IP-KGw" firstAttribute="leading" secondItem="yUf-Nq-std" secondAttribute="trailing" constant="8" id="BKN-S9-8hn"/>
                             <constraint firstAttribute="leadingMargin" secondItem="yDl-wc-TZG" secondAttribute="leading" id="BW2-xj-rQD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hJL-IP-KGw" secondAttribute="trailing" id="KsW-Se-2dM"/>
+                            <constraint firstItem="qC4-ug-XCs" firstAttribute="centerX" secondItem="vR8-Dd-oEI" secondAttribute="centerX" id="KuM-Aa-UWO"/>
                             <constraint firstItem="mkb-fD-kaG" firstAttribute="top" secondItem="9A0-6d-mak" secondAttribute="bottom" constant="7" id="LZd-jg-1pP"/>
                             <constraint firstItem="Vya-hx-SaI" firstAttribute="top" secondItem="991-Lv-zgQ" secondAttribute="bottom" constant="8" id="MKP-5T-DVO"/>
                             <constraint firstAttribute="leadingMargin" secondItem="mkb-fD-kaG" secondAttribute="leading" id="NYZ-kh-Kdl"/>
