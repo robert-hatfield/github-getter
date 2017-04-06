@@ -93,49 +93,56 @@
                                     <action selector="returnToRepoList:" destination="uYH-oM-CeE" eventType="touchUpInside" id="HrC-8B-XXq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A0-6d-mak">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9A0-6d-mak">
                                 <rect key="frame" x="16" y="66" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mkb-fD-kaG">
-                                <rect key="frame" x="16" y="94" width="233" height="18"/>
+                                <rect key="frame" x="16" y="98" width="233" height="18"/>
                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Code_Fork_dark" translatesAutoresizingMaskIntoConstraints="NO" id="hJL-IP-KGw">
-                                <rect key="frame" x="341" y="95" width="18" height="18"/>
+                                <rect key="frame" x="341" y="98" width="18" height="18"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Star_Filled" translatesAutoresizingMaskIntoConstraints="NO" id="2YU-Ib-aDG">
-                                <rect key="frame" x="271" y="95" width="18" height="18"/>
+                                <rect key="frame" x="271" y="98" width="18" height="18"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLn-49-7iJ">
-                                <rect key="frame" x="16" y="120" width="343" height="18"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDl-wc-TZG">
-                                <rect key="frame" x="16" y="146" width="343" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stars" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUf-Nq-std">
-                                <rect key="frame" x="297" y="95" width="36" height="18"/>
+                                <rect key="frame" x="297" y="98" width="36" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qC4-ug-XCs">
-                                <rect key="frame" x="133.5" y="318" width="107" height="30"/>
+                                <rect key="frame" x="134" y="318" width="107" height="30"/>
                                 <state key="normal" title="View on GitHub"/>
                                 <connections>
                                     <action selector="viewOnGitHub:" destination="uYH-oM-CeE" eventType="touchUpInside" id="jO1-RU-cwH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DateCreated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n5e-ZX-WL5">
+                                <rect key="frame" x="166" y="95" width="97" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zLn-49-7iJ">
+                                <rect key="frame" x="16" y="124" width="343" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Description" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDl-wc-TZG">
+                                <rect key="frame" x="16" y="150" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -186,28 +193,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="PrZ-NC-obv">
-                                <rect key="frame" x="0.0" y="311" width="375" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-wh-xz7">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Search by name, primary language, or description" id="PrZ-NC-obv">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                </searchBar>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cvc-wh-xz7" firstAttribute="width" secondItem="eW9-b3-2p1" secondAttribute="width" id="5pC-LG-Ebq"/>
                             <constraint firstItem="cvc-wh-xz7" firstAttribute="centerX" secondItem="eW9-b3-2p1" secondAttribute="centerX" id="KGb-by-PPd"/>
-                            <constraint firstItem="PrZ-NC-obv" firstAttribute="centerX" secondItem="eW9-b3-2p1" secondAttribute="centerX" id="WPd-2n-EJp"/>
-                            <constraint firstItem="PrZ-NC-obv" firstAttribute="top" secondItem="Q2m-iK-vB0" secondAttribute="bottom" constant="291" id="jhJ-9H-YFm"/>
-                            <constraint firstItem="cvc-wh-xz7" firstAttribute="top" secondItem="PrZ-NC-obv" secondAttribute="bottom" constant="-335" id="lvN-3G-IUS"/>
-                            <constraint firstItem="PrZ-NC-obv" firstAttribute="width" secondItem="eW9-b3-2p1" secondAttribute="width" id="tUD-I3-ROx"/>
+                            <constraint firstItem="cvc-wh-xz7" firstAttribute="top" secondItem="Q2m-iK-vB0" secondAttribute="bottom" id="grt-9w-tfT"/>
                             <constraint firstItem="LMu-aI-pYY" firstAttribute="top" secondItem="cvc-wh-xz7" secondAttribute="bottom" id="y8G-G1-yar"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="repoTableView" destination="cvc-wh-xz7" id="dN0-aI-tcs"/>
+                        <outlet property="searchBar" destination="PrZ-NC-obv" id="f20-Gh-jre"/>
                         <segue destination="uYH-oM-CeE" kind="presentation" identifier="RepoDetailViewController" id="6qH-dK-7Qc"/>
                     </connections>
                 </viewController>

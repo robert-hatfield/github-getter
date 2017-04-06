@@ -11,16 +11,16 @@ import UIKit
 class RepoViewController: UIViewController {
     
     @IBOutlet weak var repoTableView: UITableView!
-    
-    var filteredRepositories = [Repository]() {
-        didSet {
-            self.repoTableView.reloadData()
-        }
-    }
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var allRepositories = [Repository]() {
         didSet {
-            self.filteredRepositories = allRepositories
+            repoTableView.reloadData()
+        }
+    }
+    var filteredRepositories: [Repository]? {
+        didSet {
+            repoTableView.reloadData()
         }
     }
 
@@ -34,6 +34,8 @@ class RepoViewController: UIViewController {
         self.repoTableView.register(repoNib, forCellReuseIdentifier: RepositoryCell.identifier)
         self.repoTableView.estimatedRowHeight = 70
         self.repoTableView.rowHeight = UITableViewAutomaticDimension
+        
+        self.searchBar.delegate = self
         
         update()
     }
@@ -52,7 +54,7 @@ class RepoViewController: UIViewController {
             guard let selectedIndex = self.repoTableView.indexPathForSelectedRow?.row else {
                 return
             }
-            let selectedRepo = self.filteredRepositories[selectedIndex]
+            let selectedRepo = self.filteredRepositories?[selectedIndex] ?? self.allRepositories[selectedIndex]
             
             segue.destination.transitioningDelegate = self
             guard let destinationViewController = segue.destination as? RepoDetailViewController else {
@@ -63,13 +65,7 @@ class RepoViewController: UIViewController {
         }
     }
     
-    func filterRepos() {
-        self.filteredRepositories = allRepositories.filter { repo in
-            return repo.name.lowercased().contains("cookie".lowercased())
-        }
-        print(filteredRepositories)
-        self.repoTableView.reloadData()
-    }
+
     
 }
 
@@ -77,13 +73,13 @@ class RepoViewController: UIViewController {
 extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return filteredRepositories.count
+        return filteredRepositories?.count ?? allRepositories.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: RepositoryCell.identifier, for: indexPath) as! RepositoryCell
         
-        cell.repo = self.filteredRepositories[indexPath.row]
+        cell.repo = filteredRepositories?[indexPath.row] ?? allRepositories[indexPath.row]
         return cell
     }
     
@@ -99,4 +95,31 @@ extension RepoViewController: UIViewControllerTransitioningDelegate {
         return CustomTransition(duration: 0.33)
         
     }
+}
+
+// MARK: UISearchBarDelegate Extension
+extension RepoViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if !searchText.isValid() {
+            let lastIndex = searchText.index(before: searchText.endIndex)
+            searchBar.text = searchText.substring(to: lastIndex)
+        }
+        
+        if searchBar.text == "" {
+            filteredRepositories = nil
+            return
+        }
+                
+        guard var filterText = searchBar.text else { return }
+        filterText = filterText.lowercased()
+        
+        self.filteredRepositories = self.allRepositories.filter({
+            $0.name.lowercased().contains(filterText) ||
+            $0.description.lowercased().contains(filterText) ||
+            $0.language.lowercased().contains(filterText)
+        })
+    }
+    
 }

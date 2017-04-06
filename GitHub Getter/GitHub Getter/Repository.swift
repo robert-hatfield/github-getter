@@ -11,8 +11,8 @@ import Foundation
 class Repository {
     
     let name: String
-    let description: String?
-    let language: String?
+    let description: String
+    let language: String
     let stars: Int
     let isFork: Bool
     let createdAt: Date
@@ -30,8 +30,8 @@ class Repository {
         guard let createdAtDate = dateFormatter.date(from: createdAtString) else { return nil }
         self.createdAt = createdAtDate
         
-        self.description = json["description"] as? String ?? nil
-        self.language = json["language"] as? String ?? nil
+        self.description = json["description"] as? String ?? ""
+        self.language = json["language"] as? String ?? ""
         self.stars = json["stargazers_count"] as? Int ?? 0
         self.isFork = json["fork"] as? Bool ?? false
         self.repoUrlString = json["html_url"] as? String ?? "https://www.github.com"
