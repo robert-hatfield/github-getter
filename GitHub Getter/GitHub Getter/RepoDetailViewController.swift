@@ -37,23 +37,22 @@ class RepoDetailViewController: UIViewController {
         }
         
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if segue.identifier == RepoViewController.identifier {
-            segue.destination.transitioningDelegate = self
-        }
-    }
 
     @IBAction func returnToRepoList(_ sender: Any) {
-        self.performSegue(withIdentifier: RepoViewController.identifier, sender: nil)
+        self.dismiss(animated: true, completion: nil)
+        
     }
+
 
 }
 
 //MARK: Controller transitioning delegate extension
 extension RepoDetailViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return CustomTransition(duration: 0.33)
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return CustomTransition(duration: 0.33)
     }
 }
