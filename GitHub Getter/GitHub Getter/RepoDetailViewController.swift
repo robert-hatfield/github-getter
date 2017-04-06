@@ -16,6 +16,9 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var forkStatus: UIImageView!
     @IBOutlet weak var starsCount: UILabel!
     @IBOutlet weak var repoDescription: UILabel!
+    let forkDim = #imageLiteral(resourceName: "Code_Fork_dark")
+    let forkLit = #imageLiteral(resourceName: "Code_Fork_lit")
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,11 @@ class RepoDetailViewController: UIViewController {
         repoLanguage.text = repo.language
         starsCount.text = String(repo.stars)
         repoDescription.text = repo.description
+        if repo.isFork {
+            forkStatus.image = forkLit
+        } else {
+            forkStatus.image = forkDim
+        }
         
     }
     
