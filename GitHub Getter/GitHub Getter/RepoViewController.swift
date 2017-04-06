@@ -86,7 +86,7 @@ extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
 extension RepoViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         
-        return CustomTransition(duration: 1.0)
+        return CustomTransition(duration: 0.33)
         
     }
 }

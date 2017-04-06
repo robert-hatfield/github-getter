@@ -31,6 +31,6 @@ class RepoDetailViewController: UIViewController {
 //MARK: Controller transitioning delegate extension
 extension RepoDetailViewController: UIViewControllerTransitioningDelegate {
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomTransition(duration: 1.0)
+        return CustomTransition(duration: 0.33)
     }
 }
