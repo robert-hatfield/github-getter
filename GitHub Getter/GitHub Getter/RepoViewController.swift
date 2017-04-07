@@ -85,6 +85,7 @@ extension RepoViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: RepoDetailViewController.identifier, sender: nil)
+        self.repoTableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
@@ -122,9 +123,14 @@ extension RepoViewController: UISearchBarDelegate {
         })
     }
     
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text = ""
         self.filteredRepositories = nil
+        searchBar.setShowsCancelButton(false, animated: true)
         searchBar.resignFirstResponder()
     }
     
