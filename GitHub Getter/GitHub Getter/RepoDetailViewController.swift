@@ -17,10 +17,11 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var forkStatus: UIImageView!
     @IBOutlet weak var starsCount: UILabel!
     @IBOutlet weak var repoDescription: UILabel!
+    @IBOutlet weak var dateCreated: UILabel!
+    
     let forkDim = #imageLiteral(resourceName: "Code_Fork_dark")
     let forkLit = #imageLiteral(resourceName: "Code_Fork_lit")
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.transitioningDelegate = self
@@ -37,6 +38,7 @@ class RepoDetailViewController: UIViewController {
         } else {
             forkStatus.image = forkDim
         }
+        dateCreated.text = "Created \(repo.createdAt.mediumDateString())"
     }
     
     @IBAction func viewOnGitHub(_ sender: Any) {
