@@ -111,7 +111,7 @@ extension RepoViewController: UISearchBarDelegate {
             filteredRepositories = nil
             return
         }
-                
+        
         guard var filterText = searchBar.text else { return }
         filterText = filterText.lowercased()
         
@@ -120,6 +120,12 @@ extension RepoViewController: UISearchBarDelegate {
             $0.description.lowercased().contains(filterText) ||
             $0.language.lowercased().contains(filterText)
         })
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        self.filteredRepositories = nil
+        searchBar.resignFirstResponder()
     }
     
 }
