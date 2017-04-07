@@ -43,7 +43,7 @@ class RepoViewController: UIViewController {
     func update() {
         GitHub.shared.getRepos { (repositories) in
             // update tableView with repositories
-            self.allRepositories = repositories ?? []
+            self.allRepositories = repositories?.sorted(by: { $0.createdAt > $1.createdAt}) ?? []
         }
     }
     
