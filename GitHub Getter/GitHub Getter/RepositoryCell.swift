@@ -17,8 +17,18 @@ class RepositoryCell: UITableViewCell {
     var repo : Repository! {
         didSet {
             self.nameLabel.text = repo.name
-            self.descriptionLabel.text = repo.description ?? "No description provided"
-            self.languageLabel.text = repo.language ?? "No primary language"
+            
+            if repo.description != "" {
+                self.descriptionLabel.text = repo.description
+            } else {
+                self.descriptionLabel.text = "No description provided"
+            }
+            
+            if repo.language != "" {
+                self.languageLabel.text = repo.language
+            } else {
+                self.languageLabel.text = "No primary language"
+            }
         }
     }
     

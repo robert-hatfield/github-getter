@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class RepoDetailViewController: UIViewController {
     
@@ -16,12 +17,14 @@ class RepoDetailViewController: UIViewController {
     @IBOutlet weak var forkStatus: UIImageView!
     @IBOutlet weak var starsCount: UILabel!
     @IBOutlet weak var repoDescription: UILabel!
+    @IBOutlet weak var dateCreated: UILabel!
+    
     let forkDim = #imageLiteral(resourceName: "Code_Fork_dark")
     let forkLit = #imageLiteral(resourceName: "Code_Fork_lit")
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.transitioningDelegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,14 +38,29 @@ class RepoDetailViewController: UIViewController {
         } else {
             forkStatus.image = forkDim
         }
-        
+        dateCreated.text = "Created \(repo.createdAt.mediumDateString())"
+    }
+    
+    @IBAction func viewOnGitHub(_ sender: Any) {
+        presentSafariViewControllerWith(urlString: repo.repoUrlString)
+//        presentWebViewControllerWith(urlString: repo.repoUrlString)
+    }
+    
+    func presentSafariViewControllerWith(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        let safariController = SFSafariViewController(url: url)
+        self.present(safariController, animated: true, completion: nil)
+    }
+    
+    func presentWebViewControllerWith(urlString: String) {
+        let webController = WebViewController()
+        webController.url = urlString
+        self.present(webController, animated: true, completion: nil)
     }
 
     @IBAction func returnToRepoList(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-        
     }
-
 
 }
 
